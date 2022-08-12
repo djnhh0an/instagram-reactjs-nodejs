@@ -1,4 +1,3 @@
-import { data } from "../static/data.js";
 import { instagramService } from "../services/instagram.service.js";
 
 class ApiController {
@@ -8,7 +7,7 @@ class ApiController {
 
     getProfile = async (req, res, next) => {
         try {
-            const response = await instagramService.getProfile();
+            const response = instagramService.getProfile();
             res.status(200).send(JSON.stringify(response));
         } catch (error) {
             next(error)
@@ -16,13 +15,30 @@ class ApiController {
     }
 
     getFeeds = async (req, res) => {
-        const response = await instagramService.getFeeds();
-        res.status(200).send(JSON.stringify(response));
+        try {
+            const response = instagramService.getFeeds();
+            res.status(200).send(JSON.stringify(response));
+        } catch (error) {
+            next(error)
+        }
     }
 
     getStories = async (req, res) => {
-        const response = await instagramService.getStories();
-        res.status(200).send(JSON.stringify(response));
+        try {
+            const response = instagramService.getStories();
+            res.status(200).send(JSON.stringify(response));
+        } catch (error) {
+            next(error)
+        }
+    }
+
+    getSuggestions = async (req, res) => {
+        try {
+            const response = instagramService.getSuggestions();
+            res.status(200).send(JSON.stringify(response));
+        } catch (error) {
+            next(error)
+        }
     }
 };
 export default ApiController = new ApiController();

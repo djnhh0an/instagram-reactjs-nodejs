@@ -5,7 +5,7 @@ export default function UserNameLabel({ username, ...props }) {
     <a
       className="text-14-bold mr-1 cursor-pointer"
       {...props}>
-      {username || 'username'}
+      {username}
     </a>
   );
 }

@@ -4,11 +4,12 @@ import Layout from '../components/Common/Layout';
 import Stories from '../components/Stories/Stories';
 import Item from '../components/Feeds/Item';
 import MoreModalItems from '../components/Common/MoreModal';
-import { useUserState } from '../hooks';
+import { useSuggestionState, useUserState } from '../hooks';
 import Service from '../services';
 
 function Home() {
   const { setLoginUser } = useUserState();
+  const { setSuggestions } = useSuggestionState();
 
   const [profile, setProfile] = useState(null);
   const [stories, setStories] = useState(null);
@@ -21,14 +22,9 @@ function Home() {
 
   useEffect(() => {
     Service.getProfile().then((data) => updateLoginUser(data));
-  }, []);
-
-  useEffect(() => {
     Service.getFeeds().then((data) => setFeeds(data));
-  }, []);
-
-  useEffect(() => {
     Service.getStories().then((data) => setStories(data));
+    Service.getSuggestions().then((data) => setSuggestions(data))
   }, []);
 
   if (!profile) return null;

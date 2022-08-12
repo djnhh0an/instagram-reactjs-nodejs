@@ -1,5 +1,5 @@
 import { instagramProvider } from "../providers/instagram.provider.js";
-import { data } from "../static/data.js";
+import { feeds, profile, stories, suggestions } from "../static/data/index.js";
 
 export class InstagramService {
     getUserProfile = async (userId) => {
@@ -17,17 +17,13 @@ export class InstagramService {
     /*
     The service to get the mocked data
      */
-    getProfile = async () => {
-        return data.loginUser;
-    }
+    getProfile = () => profile;
 
-    getFeeds = async () => {
-        return data.feed;
-    }
+    getFeeds = () => feeds;
 
-    getStories = async () => {
-        return data.stories;
-    }
+    getStories = () => stories;
+
+    getSuggestions = () => suggestions;
 }
 
 export const instagramService = new InstagramService();

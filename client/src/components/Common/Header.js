@@ -12,7 +12,6 @@ import ExploreIconActive from '../../public/icons/explore_icon_active';
 import ActivityIconActive from '../../public/icons/activity_icon_active';
 import ProfilePicture from '../Common/ProfilePicture';
 import NoneActionLink from '../Common/NoneActionLink';
-
 import { useRouter, useUserState } from '../../hooks';
 
 export default function Header({ user }) {
@@ -34,21 +33,19 @@ export default function Header({ user }) {
       ? (<ActivityIconActive className="header-icon" />)
       : (<ActivityIcon className="header-icon" />);
 
-  const { data } = useUserState();
-  const loginUserData = data;
-
+  const { loginUserData } = useUserState();
   return (
     <nav className="navigation fixed z-20 top-0">
       <div className="header-container">
         <NoneActionLink to="/">
           <img src="./logo.png" className="header-logo" />
         </NoneActionLink>
-        <SearchBar />
+        <SearchBar/>
         <div className="header-icons flex ml-auto items-center">
           <NoneActionLink to="/">{home}</NoneActionLink>
-          <NoneActionLink to="/messages">{messages}</NoneActionLink>
-          <NoneActionLink to="/explore">{explore}</NoneActionLink>
-          <NoneActionLink to="/activity">{activity}</NoneActionLink>
+          <NoneActionLink to="#">{messages}</NoneActionLink>
+          <NoneActionLink to="#">{explore}</NoneActionLink>
+          <NoneActionLink to="#">{activity}</NoneActionLink>
           {user && (
             <ProfilePicture
               className={

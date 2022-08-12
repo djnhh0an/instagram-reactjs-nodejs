@@ -10,6 +10,10 @@ export class Service {
     getStories = async () => {
         return await fetch('/api/stories').then((response) => response.json());
     }
+
+    getSuggestions = async () => {
+        return await fetch('/api/suggestions').then((response) => response.json());
+    }
 }
 
 export default Service = new Service();

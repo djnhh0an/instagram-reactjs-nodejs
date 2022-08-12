@@ -11,7 +11,6 @@ export default function StoryItem({ data }) {
                     src={data.image}
                     username={data.username}
                     size={56}
-                    border
                 />
             </div>
             <UserNameLabel

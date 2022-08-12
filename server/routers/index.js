@@ -13,4 +13,5 @@ router.get('/api/healthCheck', ApiController.healthCheck);
 router.get('/api/profile', ApiController.getProfile);
 router.get('/api/feeds', ApiController.getFeeds);
 router.get('/api/stories', ApiController.getStories);
+router.get('/api/suggestions', ApiController.getSuggestions);
 export default router;
