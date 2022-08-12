@@ -21,7 +21,7 @@ export class InstagramService {
         return data.loginUser;
     }
 
-    getFeedData = async () => {
+    getFeeds = async () => {
         return data.feed;
     }
 

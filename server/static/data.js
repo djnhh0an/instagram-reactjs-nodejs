@@ -106,7 +106,7 @@ export const data = {
       {
         photos: [
           'https://picsum.photos/id/842/600/600',
-          'https://picsum.photos/id/843/600/600',
+          'https://picsum.photos/id/742/600/600',
         ],
         user: {
           username: 'cantho',
@@ -114,7 +114,7 @@ export const data = {
         },
         likeCount: 15,
         commentCount: 5,
-        pid: 5,
+        pid: 6,
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
         popularComments: [
           { username: 'perspiciatis', description: 'Et harum quidem rerum facilis est et expedita distinctio...' },
@@ -133,7 +133,7 @@ export const data = {
         },
         likeCount: 25,
         commentCount: 15,
-        pid: 5,
+        pid: 7,
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
         popularComments: [
           { username: 'perspiciatis', description: 'Et harum quidem rerum facilis est et expedita distinctio...' },
@@ -152,7 +152,7 @@ export const data = {
         },
         likeCount: 12,
         commentCount: 9,
-        pid: 5,
+        pid: 8,
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
         popularComments: [
           { username: 'perspiciatis', description: 'Et harum quidem rerum facilis est et expedita distinctio...' },

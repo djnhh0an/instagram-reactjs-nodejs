@@ -11,6 +11,6 @@ router.get('/api/media/tag', instagramController.searchByTag);
 //internal
 router.get('/api/healthCheck', ApiController.healthCheck);
 router.get('/api/profile', ApiController.getProfile);
-router.get('/api/feed', ApiController.getFeedData);
+router.get('/api/feeds', ApiController.getFeeds);
 router.get('/api/stories', ApiController.getStories);
 export default router;

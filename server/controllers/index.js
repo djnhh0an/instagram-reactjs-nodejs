@@ -15,8 +15,8 @@ class ApiController {
         }
     }
 
-    getFeedData = async (req, res) => {
-        const response = await instagramService.getFeedData();
+    getFeeds = async (req, res) => {
+        const response = await instagramService.getFeeds();
         res.status(200).send(JSON.stringify(response));
     }
 
