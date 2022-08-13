@@ -5,13 +5,13 @@ Because the limitation of Instagram API that why data is the mock data. In the s
 In the project directory, you can run:
 
 ### NodeJS Server:
-Run `npm run start` to start the NodeJS Server
+Run `npm run start` to start the NodeJS Server.\
 Open [http://localhost:3001/api/healcheck](HealthCheck) to make sure that server is started.
 
 ### ReactJS Client:
-Run these step to start client:
-Run `cd client`
-Run `npm start` to start the client.
+Run these step to start client:.\
+Run `cd client`.\
+Run `npm start` to start the client.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
