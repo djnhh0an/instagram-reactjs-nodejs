@@ -11,7 +11,11 @@ export default function SearchBar() {
 
   const onChange = (value) => {
     setSearchOption(value);
-    navigate("/profile");
+    if (!value) {
+      navigate("/");
+    } else {
+      navigate("/profile");
+    }
   }
 
   return (

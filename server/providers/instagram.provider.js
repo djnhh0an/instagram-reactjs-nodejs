@@ -8,7 +8,6 @@ export class InstagramProvider {
             throw new Error("Access token is not valid.");
         }
         const url = `${GRAPH_URL}/${userId}?fields=id,username,media_count,account_type&access_token=${accessToken}`;
-        console.log('URL', url);
         const res = await httpClient.get(url);
         return res.data;
     }
@@ -20,7 +19,6 @@ export class InstagramProvider {
         }
 
         const url = `${GRAPH_URL}/${userId}/media?fields=id,caption,media_type,media_url,tag&access_token=${accessToken}`
-        console.log('URL', url);
         const res = await httpClient.get(url);
         return res.data;
     }

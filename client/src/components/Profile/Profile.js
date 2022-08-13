@@ -9,8 +9,9 @@ import { useUserState } from "../../hooks";
 function Profile() {
     const { loginUserData } = useUserState();
     const { searchOption } = useSearchOptionState();
+
     return (
-        <Layout user={loginUserData.username}>
+        <Layout user={loginUserData}>
             <div>
                 <div className="flex mb-12">
                     <ProfilePicture className="mr-auto"
@@ -31,7 +32,7 @@ function Profile() {
                         </Stack>
                     </div>
                 </div>
-                <ProfileTabPictures />
+                <ProfileTabPictures option={searchOption} />
             </div>
         </Layout>);
 }

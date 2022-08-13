@@ -12,7 +12,7 @@ import ExploreIconActive from '../../public/icons/explore_icon_active';
 import ActivityIconActive from '../../public/icons/activity_icon_active';
 import ProfilePicture from '../Common/ProfilePicture';
 import NoneActionLink from '../Common/NoneActionLink';
-import { useRouter, useUserState } from '../../hooks';
+import { useRouter } from '../../hooks';
 
 export default function Header({ user }) {
   const router = useRouter();
@@ -33,14 +33,13 @@ export default function Header({ user }) {
       ? (<ActivityIconActive className="header-icon" />)
       : (<ActivityIcon className="header-icon" />);
 
-  const { loginUserData } = useUserState();
   return (
     <nav className="navigation fixed z-20 top-0">
       <div className="header-container">
         <NoneActionLink to="/">
           <img src="./logo.png" className="header-logo" />
         </NoneActionLink>
-        <SearchBar/>
+        <SearchBar />
         <div className="header-icons flex ml-auto items-center">
           <NoneActionLink to="/">{home}</NoneActionLink>
           <NoneActionLink to="#">{messages}</NoneActionLink>
@@ -48,15 +47,11 @@ export default function Header({ user }) {
           <NoneActionLink to="#">{activity}</NoneActionLink>
           {user && (
             <ProfilePicture
-              className={
-                loginUserData.username === user
-                  ? 'header-profile-pic-border'
-                  : ''
-              }
-              src={loginUserData?.image}
-              username={loginUserData?.username}
+              className="header-profile-pic-border"
+              src={user?.image}
+              username={user?.username}
               style={{
-                padding: loginUserData.username === user ? '2px' : '3px',
+                padding: user.username === user ? '2px' : '3px',
                 marginLeft: '-2px',
               }}
               size={22}

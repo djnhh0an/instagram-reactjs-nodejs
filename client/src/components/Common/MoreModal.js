@@ -5,8 +5,7 @@ export default function MoreModalItems() {
   return (
     <Modal>
       <button
-        className="modal-box-item h-12 bg-white w-full text-14-bold text-red"
-        onClick={() => console.log('test')}>
+        className="modal-box-item h-12 bg-white w-full text-14-bold text-red">
         Report Inappropriate
       </button>
       <button className="modal-box-item h-12 bg-white w-full text-14-bold text-red">

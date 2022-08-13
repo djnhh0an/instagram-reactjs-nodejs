@@ -1,4 +1,5 @@
 import { atom } from 'recoil';
+import { localStorageEffect } from '../localStorageEffect';
 
 export const loginUser = atom({
   key: 'login_user',
@@ -7,4 +8,5 @@ export const loginUser = atom({
     name: '',
     image: '',
   },
+  effects: [localStorageEffect('login_user')]
 });

@@ -1,5 +1,6 @@
 import { atom } from 'recoil';
 import { useRecoilState } from 'recoil';
+import { localStorageEffect } from './localStorageEffect';
 
 const searchOptionState = atom({
     key: 'search_option_state',
@@ -8,6 +9,7 @@ const searchOptionState = atom({
         username: '',
         name: ''
     },
+    effects: [localStorageEffect('search_option_state')]
 });
 
 export const useSearchOptionState = () => {
