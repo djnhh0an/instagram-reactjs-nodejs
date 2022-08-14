@@ -1,6 +1,6 @@
 import express from 'express';
 import instagramController from '../controllers/instagram.controller.js';
-import ApiController from '../controllers/index.js';
+import ApiController from '../controllers/instagram-mock.controller.js';
 const router = express.Router();
 
 // instagram

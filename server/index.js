@@ -1,14 +1,13 @@
 import http from 'http';
 import dotenv from 'dotenv';
 import express from 'express';
-import fs from 'fs';
 import morgan from 'morgan';
 import routes from './routers/index.js';
 import errorHandler from './common/errorHandler.js';
 import bodyParser from 'body-parser';
 import path from "path"
 import { fileURLToPath } from 'url';
-
+import { metaUrl } from './common/metaUrl.js'
 dotenv.config();
 
 const app = new express();
@@ -24,7 +23,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 app.use(errorHandler)
 
-const __filename = fileURLToPath(import.meta.url);
+const __filename = fileURLToPath(metaUrl());
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 app.get('*', (req, res) => {
