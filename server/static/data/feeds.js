@@ -16,13 +16,20 @@ export const feeds = [
         pid: 1,
         description: '#nicephoto Nice photos.',
         popularComments: [
-            { username: 'nghe_an', description: 'Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?' },
-            { username: 'ha_noi', description: 'Et harum quidem rerum facilis est et expedita distinctio.' },
+            { username: 'nghean', description: 'Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?' },
+            { username: 'hanoi', description: 'Et harum quidem rerum facilis est et expedita distinctio.' },
         ],
         time: '2 hours ago',
     },
     {
-        photos: ['https://picsum.photos/id/301/600/600'],
+        photos: [
+            'https://picsum.photos/id/301/600/600',
+            'https://picsum.photos/id/302/600/600',
+            'https://picsum.photos/id/307/600/600',
+            'https://picsum.photos/id/304/600/600',
+            'https://picsum.photos/id/305/600/600',
+            'https://picsum.photos/id/306/600/600'
+        ],
         user: {
             username: 'binhdinh',
             image: 'https://picsum.photos/id/302/600/600',
@@ -30,7 +37,7 @@ export const feeds = [
         likeCount: 121,
         commentCount: 22,
         pid: 2,
-        description: 'Hi from Binh Dinh!',
+        description: '#autum Hi from Binh Dinh!',
         popularComments: [
             { username: 'hoantran', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' },
             { username: 'mrbean', description: 'Ut enim ad minim veniam, quis nostrud exercitation...' },
@@ -42,6 +49,7 @@ export const feeds = [
             'https://picsum.photos/id/123/600/600',
             'https://picsum.photos/id/211/600/600',
             'https://picsum.photos/id/304/600/600',
+            'https://picsum.photos/id/305/600/600',
         ],
         user: {
             username: 'react_js',
@@ -50,7 +58,7 @@ export const feeds = [
         likeCount: 13,
         commentCount: 15,
         pid: 3,
-        description: 'New updates',
+        description: 'New updates #reactjs',
         popularComments: [
             { username: 'frontend', description: 'Lorem ipsum dolor sit amet!' },
             { username: 'backend', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..' },
@@ -90,7 +98,7 @@ export const feeds = [
         likeCount: 10,
         commentCount: 5,
         pid: 5,
-        description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
+        description: '#macbook Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
         popularComments: [
             { username: 'perspiciatis', description: 'Et harum quidem rerum facilis est et expedita distinctio...' },
             { username: 'voluptatem', description: 'Quis autem vel eum iure reprehenderit qui!' },

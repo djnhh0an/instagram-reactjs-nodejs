@@ -22,3 +22,11 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+### The high level deisgn
+<img src="design/high-level-design.png" width="500" title="High level design">
+
+### The unit testing strategy
+The unit testing strategy is implemented with jest, babel-jest.
+
+<img src="design/unit-test-coverage.png" width="500" title="High level design">

@@ -13,14 +13,17 @@ export default function SearchBar() {
     setSearchOption(value);
     if (!value) {
       navigate("/");
-    } else {
+    } else if (value.isHashtag) {
+      navigate("/hashtag");
+    }
+    else {
       navigate("/profile");
     }
   }
 
   return (
     <Autocomplete
-      className='items-center justify-center ml-auto mt-4 mb-4'
+      className='header-item-hidden items-center justify-center ml-auto mt-4 mb-4'
       freeSolo
       id="search-bar"
       options={suggestionsData}

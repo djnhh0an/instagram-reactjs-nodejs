@@ -3,7 +3,7 @@ import { ImageList, ImageListItem } from "@mui/material"
 export function ProfileImageList({ images }) {
     return (
         images &&
-        <ImageList sx={{ width: 800, height: 600 }} cols={3} rowHeight={295}>
+        <ImageList sx={{ width: 900, height: 600 }} cols={3} rowHeight={295}>
             {images.map((item) => (
                 <ImageListItem key={item.title}>
                     <img

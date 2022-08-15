@@ -36,8 +36,9 @@ export default function Header({ user }) {
   return (
     <nav className="navigation fixed z-20 top-0">
       <div className="header-container">
-        <NoneActionLink to="/">
-          <img src="./logo.png" className="header-logo" />
+        <NoneActionLink to="/" className="flex">
+          <img src="./surecomp-logo.png" className="h-10 w-10 mr-2"/>
+          <img src="./logo.png" className="header-logo header-item-hidden"/>
         </NoneActionLink>
         <SearchBar />
         <div className="header-icons flex ml-auto items-center">

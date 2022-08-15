@@ -3,7 +3,10 @@ export default {
     collectCoverage: false,
     coverageDirectory: "coverage",
     coveragePathIgnorePatterns: [
-        "/node_modules/"
+        "/node_modules/",
+        '/client/src/public/*.*',
+        '/client/src/hooks/*.*',
+        '/common/*.*'
     ],
     coverageReporters: [
         "json",

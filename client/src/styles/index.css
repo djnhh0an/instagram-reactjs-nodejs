@@ -260,4 +260,7 @@ body {
   .add-comment-container {
     display: none;
   }
+  .header-item-hidden {
+    display: none;
+  }
 }

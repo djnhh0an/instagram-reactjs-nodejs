@@ -14,7 +14,7 @@ function Profile() {
         <Layout user={loginUserData}>
             <div>
                 <div className="flex mb-12">
-                    <ProfilePicture className="mr-auto"
+                    <ProfilePicture className="mr-32"
                         src={searchOption.image}
                         size={150}
                         username={searchOption.username} />
